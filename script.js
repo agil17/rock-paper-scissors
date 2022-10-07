@@ -22,23 +22,29 @@ const playRound = (playerChoice, cpuChoice) => {
     else if(playerChoice.toLowerCase() === 'paper') {
         if(cpuChoice === "rock"){
             console.log(`You win, paper beats rock.`);
+            return `win`;
         }
         else if(cpuChoice === "scissors") {
             console.log(`You lose, scissors beats paper.`);
+            return `lose`;
         }
         else {
             console.log(`Tie, paper versus paper`);
+            return `tie`;
         }
     }
     else if(playerChoice.toLowerCase() === 'scissors') {
         if(cpuChoice === "rock"){
             console.log(`You lose, rock beats scissors.`);
+            return `lose`;
         }
         else if(cpuChoice === "paper") {
             console.log(`You win, scissors beats paper.`);
+            return `win`;
         }
         else {
             console.log(`Tie, scissors versus scissors`);
+            return `tie`;
         }
     } 
 }
@@ -57,7 +63,14 @@ const game = () => {
             losses++;
         }
     }
-    return wins;
-    // finish returns for playround and give over 3/5 winner in game
+    if(wins === losses) {
+        return `You tied`;
+    }
+    else if(wins > losses) {
+        return `You win!`;
+    }
+    else {
+        return `You lose`;
+    }
 }
 
