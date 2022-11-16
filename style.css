@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    padding: 48px;
+    border: white 4px solid;
+}
+
+div {
+    color: white;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-evenly;
+    border: white 4px solid;
+    font-size: 48px;
+    border: solid 4px white;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.choices {
+    display: flex;
+    border: white solid 4px;
+    font-size: 48px;
+    justify-content: space-around;
+    padding: 48px;
+}
+
+.choice {
+    border: solid white 4px;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.score-you, .score-cpu {
+    text-align: center;
+}
+
